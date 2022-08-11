@@ -1,0 +1,11 @@
+{
+  "compilerOptions": {
+    "module": "CommonJS",
+    "esModuleInterop": true,
+    "target": "es2020",
+    "moduleResolution": "es2020",
+    "sourceMap": true,
+    "outDir": "dist"
+  },
+  "lib": ["es2020"]
+}
