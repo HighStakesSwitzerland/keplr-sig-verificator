@@ -7,12 +7,14 @@ Verifies the validity of a message signed with secp256k1 Eliptic Curve algorithm
 ### Development
 ```
 npm install
+npm run build
 npm run dev
 ```
 
 ### Production
 ```
 npm install
+npm run build
 npm run start
 ```
 
