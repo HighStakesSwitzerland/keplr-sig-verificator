@@ -1,6 +1,18 @@
 # keplr-sig-verificator
 
-Verifies the validity of a message signed with secp256k1 Eliptic Curve algorithm
+Verifies the validity of a message signed with secp256k1 Eliptic Curve algorithm created by Keplr Wallet.
+
+Generate the keplr signed message using the follow code:
+```
+keplr.signArbitrary(
+  "chain-id",
+  "bech32Address",
+  "arbitrary message ex {\"field1\": \"value1\", ...}")
+  .then((res: StdSignature) => {
+      console.log(res);
+    }
+  );
+```
 
 # Running
 
@@ -24,10 +36,10 @@ Server will listen the port specifed in `app.ts`
 
 ### Request
 ```
-POST http://localhost:3000/verify/:bech32_prefix/:wallet_address
+POST http://localhost:30000/verify/:bech32_prefix/:wallet_address
 
 {
-    "data": "{\"field1\": \"value1\", ...}",
+    "data": "{\"field1\": \"value1\", ...}", // must be the exact same arbitrary data 
     "signature":
     {
         "pub_key": {
